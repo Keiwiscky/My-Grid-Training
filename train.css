@@ -1,0 +1,50 @@
+html, body {margin: 0;
+            padding: 0;
+            height: 1000px;}
+.wrapper {display: grid;
+          grid-template-columns:repeat(3, 1fr );
+          grid-gap: 1em;
+          /*grid-auto-rows: 100px;*/
+         grid-auto-rows: minmax(50px,auto);}
+
+.wrapper > div {background:lightblue;
+    padding:1em;}
+.nested {display: grid;
+         grid-template-columns:repeat(3, 1fr);
+          grid-auto-rows: 50px;
+         grid-gap: 1em;}
+
+.nested > div {
+    border: 1px solid;
+    padding: 1em;
+}
+
+.Response{display: grid;
+          grid-template-columns: repeat(3,2fr);
+          grid-auto-rows: minmax(70px, auto);
+          grid-auto-columns: minmax(100px, auto);
+          grid-gap: 1em;
+         justify-items: stretch;
+         margin-top: 100px;}
+
+.Response > div {
+    background: aquamarine;
+}
+.Response > div:nth-child(odd) {
+    background:hotpink;
+}
+.box1 {/*align-self: start;*/
+       grid-column: 1/3;
+       grid-row: 1/3;}
+
+.box2 {/*align-self: end;*/
+       grid-column: 3;
+       grid-row: 1/3;}
+
+.box3 {/*justify-self: end;*/
+        grid-column: 2/4;
+       grid-row: 3/5;}
+
+.box4 {/*justify-self: start;*/
+       grid-column: 1;
+       grid-row: 2/4;}
